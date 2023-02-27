@@ -6,7 +6,6 @@ matplotlib
 scikit-learn
 numpy
 pickle4
-sklearn
 nltk
 tqdm
 torch
