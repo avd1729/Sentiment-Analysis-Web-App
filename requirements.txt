@@ -9,3 +9,6 @@ pickle4
 sklearn
 nltk
 tqdm
+torch
+mkl
+scipy
