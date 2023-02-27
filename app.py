@@ -1,5 +1,8 @@
 from nltk.sentiment import SentimentIntensityAnalyzer
 from tqdm.notebook import tqdm
+import nltk
+nltk.download('vader_lexicon')
+
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 
