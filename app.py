@@ -18,14 +18,18 @@ def home():
 #To use the predict button in our web-app
 @app.route('/predict1',methods=['POST'])
 def predict1():
-    inp = request.form.get("inp")
-    #initializing the model
-    score = sia.polarity_scores(inp)
+    if request.method == "POST":
+        inp = request.form.get("inp")
+        #initializing the model
+        sia = SentimentIntensityAnalyzer()
+        score = sia.polarity_scores(inp)
 
-    if score["neg"] != 0:
-        message = 'Negative'
-    else:
-        message = 'Positive'
+        if score["neg"] != 0:
+            message = 'Negative'
+        else:
+            message = 'Positive'
+        
+    
         
     return render_template('index.html', prediction_text=message)
     
