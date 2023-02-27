@@ -8,6 +8,6 @@ numpy
 pickle4
 nltk
 tqdm
-torch
+tensorflow
 mkl
 scipy
